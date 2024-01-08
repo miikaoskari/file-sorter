@@ -24,19 +24,16 @@
 
 #include "filesorter-application.h"
 
-int
-main (int   argc,
-      char *argv[])
-{
-	g_autoptr(FilesorterApplication) app = NULL;
-	int ret;
+int main(int argc, char *argv[]) {
+    g_autoptr(FilesorterApplication) app = NULL;
+    int ret;
 
-	bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
-	bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
-	textdomain (GETTEXT_PACKAGE);
+    bindtextdomain(GETTEXT_PACKAGE, LOCALEDIR);
+    bind_textdomain_codeset(GETTEXT_PACKAGE, "UTF-8");
+    textdomain(GETTEXT_PACKAGE);
 
-	app = filesorter_application_new ("org.miika.filesorter", G_APPLICATION_DEFAULT_FLAGS);
-	ret = g_application_run (G_APPLICATION (app), argc, argv);
+    app = filesorter_application_new("org.miika.filesorter", G_APPLICATION_DEFAULT_FLAGS);
+    ret = g_application_run(G_APPLICATION (app), argc, argv);
 
-	return ret;
+    return ret;
 }

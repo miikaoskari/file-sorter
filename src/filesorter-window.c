@@ -19,6 +19,7 @@
  */
 
 #include "config.h"
+#include "sorting.h"
 
 #include "filesorter-window.h"
 
@@ -60,6 +61,7 @@ static gboolean on_drop(GtkDropTarget *target,
         GFile *file = l->data;
         g_print("%s\n", g_file_get_path(file));
     }
+
 
     return TRUE;
 }

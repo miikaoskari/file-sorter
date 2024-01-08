@@ -2,6 +2,7 @@ filesorter_sources = [
   'main.c',
   'filesorter-application.c',
   'filesorter-window.c',
+  'sorting.c',
 ]
 
 filesorter_deps = [
