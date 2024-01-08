@@ -1,0 +1,6 @@
+data/org.miika.filesorter.desktop.in
+data/org.miika.filesorter.metainfo.xml.in
+data/org.miika.filesorter.gschema.xml
+src/main.c
+src/filesorter-window.c
+src/filesorter-window.ui

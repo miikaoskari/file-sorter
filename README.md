@@ -1,2 +1,3 @@
-# file-sorter
-gtk4 learning project
+# filesorter
+
+A description of this project.

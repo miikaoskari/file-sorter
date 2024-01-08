@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=filesorter
+Exec=filesorter
+Icon=org.miika.filesorter
+Terminal=false
+Type=Application
+Categories=GTK;
+StartupNotify=true

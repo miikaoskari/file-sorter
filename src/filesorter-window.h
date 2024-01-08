@@ -1,4 +1,4 @@
-/* main.c
+/* filesorter-window.h
  *
  * Copyright 2024 Unknown
  *
@@ -18,25 +18,14 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-#include "config.h"
+#pragma once
 
-#include <glib/gi18n.h>
+#include <adwaita.h>
 
-#include "filesorter-application.h"
+G_BEGIN_DECLS
 
-int
-main (int   argc,
-      char *argv[])
-{
-	g_autoptr(FilesorterApplication) app = NULL;
-	int ret;
+#define FILESORTER_TYPE_WINDOW (filesorter_window_get_type())
 
-	bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
-	bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
-	textdomain (GETTEXT_PACKAGE);
+G_DECLARE_FINAL_TYPE (FilesorterWindow, filesorter_window, FILESORTER, WINDOW, AdwApplicationWindow)
 
-	app = filesorter_application_new ("org.miika.filesorter", G_APPLICATION_DEFAULT_FLAGS);
-	ret = g_application_run (G_APPLICATION (app), argc, argv);
-
-	return ret;
-}
+G_END_DECLS
